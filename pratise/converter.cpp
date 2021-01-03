@@ -1,4 +1,4 @@
-
+#define _CRT_SECURE_NO_WARNINGS
 #include<cstdio>
 #include<cstdlib>
 #include<cstring>
@@ -13,9 +13,11 @@
 #include<bitset>
 #include<sstream>
 #include<iostream>
+
 using namespace std;
 #define Max 100
 //进制权值
+
 int power(int R, int turn)
 {
 	int ans = 1;
@@ -30,7 +32,7 @@ int power(int R, int turn)
 long int Atoi(string& S, int R)
 {
 	long int ans = 0;
-	for (int i = 0; i < S.size(); i++)//按权展开
+	for (int i = 0; i<S.size(); i++)//按权展开
 	{
 		ans += (S[i] - '0') * power(R, S.size() - i - 1);
 	}
@@ -85,7 +87,7 @@ void ToAll()
 	cout << "请输入数和进制:" << endl;
 	cin >> num >> R;
 	cout << num << "转换为" << R << "进制为：" << Itoa(num, R) << endl;
-	cout << "利用itoa函数:" << itoa(num, str, R) << endl;
+	cout << "利用itoa函数:" << _itoa(num, str, R) << endl;
 }
 //任意进制转十进制函数 调用Atoi函数，strtol函数
 void ToDecimal(string& S)
