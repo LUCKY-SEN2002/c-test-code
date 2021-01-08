@@ -67,66 +67,17 @@
 	打印菱形
 	
 	*/
+//
 int main() {
-	int line;//菱形总行数
-	int column;//列数
-	int i;//当前行
-	int j; //当前列
-	printf("请输入菱形的总行数（奇数）：");
-		scanf("%d", &line);
-	if (line % 2 == 0) {
-		printf("请输入奇数，偶数行无法打印！");
-		exit(1);
-
-	}
-	column = line;//行列相同
-	for (i = 1; i <= line; i++) {
-
-		if (i < (line + 1) / 2 + 1) {
-			//上半部分（包括中间一行）
-			for (j = 1; j <= column; j++) {
-				//遍历上半部分所有列
-				if ((column + 1) / 2 - (i - 1) <= j && j <= (column + 1) / 2 + (i - 1)) {
-					printf("*");
-
-				}
-				else
-				{
-					printf(" ");
-
-				}
-
-
-			}
-		}
-		else//下半部分
-		{
-			for (j = 1; j <= column; j++) {
-				if ((column + 1) / 2 - (line - i)<=j&&j<=(column+1)/2+(line-i)) {
-					printf("*");
-
-
-				}
-				else
-				{
-					printf(" ");
-
-				}
-		}
-
-	
-		}
-		printf("\n");
-
-	}
-
-
+	char a[] = "abc";//其实该字符窜已经包含\0在里面。
+	char b[] = { 'a','b','c','\0' };//加入0表示，终止字符串
+	printf("%s\n", a);
+	printf("%s\n", b);
 	return 0;
 
+}
 
 
-	}
-	
 	
 
 
