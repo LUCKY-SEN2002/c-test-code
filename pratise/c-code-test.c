@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
+#include <windows.h>
 
 //#define num2 2;
 //int a;
@@ -199,30 +200,120 @@ int main()
 // 1 1 1
 //1 1 1 1
 /1 1 1 1 1*/
+//#include <windows.h>
+//int main() {
+//
+//	char c;
+//	printf("请输入一个需要打印的字符：");
+//	scanf("%c", &c);
+//	int a = 5;//定义行数
+//	int b = 9;//定义列数
+//	for (int i = 1; i <= a; i++) {
+//		for (int j = 1; j <= 5 - i; j++) {
+//
+//			printf("0");
+//			Sleep(1000);
+//
+//
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//
+//}
+//打印菱形奇数行
+//#include <stdio.h>
+//#include<windows.h>
+//int i;//定义行数
+//int j;//列数
+//int k;
+//int main(){
+//	printf("请输入需要打印的行数（奇数）");
+//	scanf("%d", &k);//扫描行数
+//	while (k % 2 == 0) {
+//		printf("请输入正确的行数（奇数）");
+//		scanf("%d", &k);//扫描行数
+//		
+//	}
+//	i = k;
+//	j = ((i + 1) / 2);
+//	for (int a = 1; a <= (i + 1) / 2;a++) {//打印上半部分
+//		for (int b = 1; b <= ((i + 1) / 2) + a - 1; b++) {
+//			
+//			if (b <j + 1 - a) {
+//
+//				printf(" ");
+//			}
+//			else {
+//					printf("*");
+//					Sleep(10);
+//				}
+// 
+//
+//			
+//			
+//		}
+//		printf("\n");
+//		
+//	}
+//	for (int d = j + 1; d <= k;d++) {//打印下半部分
+//		for (int c = 1; c <= (k-(d - j)); c++) {
+//			if (c <= d - j) {
+//				printf(" ");
+//
+//			}
+//			else
+//			{
+//				printf("*");
+//				Sleep(10);
+//			}
+//		}
+//		printf("\n");
+//	}
+//
+//
+//
+//	return 0;
+//
+//
+//
+//
+//}
+
+//函数打印
+//#include <stdio.h>
+//#define ABS(x) ((x) > 0 ? (x) : -(x))
+//
+//int main()
+//{
+//	double a = 8, b = 10; /*菱形宽度和高度的一半*/
+//	int i, j;
+//	for (i = -a; i <= a; ++i) {
+//		for (j = -b; j <= b; ++j)
+//			putchar((ABS(i) / a + ABS(j) / b > 1) ? ' ' : '*');
+//		putchar('\n');
+//	}
+//	return 0;
+//}
+//冒泡排序
+#pragma warning(disable:4996)
+int arr[];
+int i;
+
 int main() {
+	printf("请输入需要排序的个数：");
+	scanf_s("%d", &i);
+	printf("请输入需要排序的数：");
+	
+	for (int a = 1; a <= i;a++) {
 
-	char c;
-	scanf("%c", &c);
-	int a = 5;//定义行数
-	int b = 9;//定义列数
-	for (int i = 1; i <= a; i++) {
-		if (i % 2 != 0) {
-			for (int j = 1; j <= b; j++) {
-
-			}
-		}
-		else {
-			for (int j = 1; j <= b; j++) {
-
-
-			}
-
-		}
+		scanf_s("%d", &arr[i]);
 
 	}
-
+	int b = 2;
+	
+	return 0;
 }
-
 
 
 	
