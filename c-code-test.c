@@ -683,51 +683,56 @@ int main()
 // }
 
 //二分查找法
+// #include <stdio.h>
+// int main()
+// {
+// 	int k = 11;
+
+// 	int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9,10}; //0 1 2 3 4 5 6 7 8 下标
+// 	int sz = sizeof(arr) / sizeof(arr[0]);	 //1 2 3 4 5 6 7 8 9
+// 	int left = 0;
+// 	int right = sz - 1;
+
+// 	while (left<=right)
+// 	{
+// 	int mid = (left + right) / 2;
+// 		if (arr[mid] > k)
+// 		{
+// 			right = mid - 1;
+// 		}
+// 		else if (arr[mid] < k)
+// 		{
+// 			left = mid + 1;
+// 		}
+// 		else
+// 		{
+// 			printf("找到了，这个数字的下标是%d\n",mid);
+//             break;
+// 		}
+// 	}
+// 	if (left>right)
+
+// 	{
+// 	printf("找不到！该数可能不存在");
+// 	}
+
+// 	return 0;
+// }
+
 #include <stdio.h>
 int main()
 {
-	int k = 11;
-
-	int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9,10}; //0 1 2 3 4 5 6 7 8 下标
-	int sz = sizeof(arr) / sizeof(arr[0]);	 //1 2 3 4 5 6 7 8 9
-	int left = 0;
-	int right = sz - 1;
-	
-	while (left<=right)
+	char arr1[] = "welcome to GDUT!";
+	char arr2[] = "****************";
+	int lengh = sizeof(arr1);
+	printf("%d", lengh);
+	for (int m = 0; m <= lengh; m++)
 	{
-	int mid = (left + right) / 2;
-		if (arr[mid] > k)
-		{
-			right = mid - 1;
-		}
-		else if (arr[mid] < k)
-		{
-			left = mid + 1;
-		}
-		else
-		{
-			printf("找到了，这个数字的下标是%d\n",mid);
-            break;
-		}
+      for (int k=)
+	  {
+		
+	  }
+	  
+		printf("%c", arr2[m]);
 	}
-	if (left>right)
-	
-	{
-	printf("找不到！该数可能不存在");
-	}
-	
-	return 0;
 }
-
-// #include <stdio.h>
-// int  main()
-// {
-// 	char arr1[]="hhhhhhhhh??";
-// 	char arr2[]="*****";
-// 	for(int m=0;m<=2;m++){
-
-// 		printf("%c",arr2[m]);
-
-// 	}
-// for
-// }
