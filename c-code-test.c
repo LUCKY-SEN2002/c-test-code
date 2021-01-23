@@ -720,19 +720,28 @@ int main()
 // }
 
 #include <stdio.h>
+#include <string.h>
+#include<windows.h>
+#include<stdlib.h>
 int main()
 {
 	char arr1[] = "welcome to GDUT!";
 	char arr2[] = "****************";
-	int lengh = sizeof(arr1);
-	printf("%d", lengh);
-	for (int m = 0; m <= lengh; m++)
+
+	int left = 0;
+	int right = strlen(arr1) - 1;
+	while (right >= left)
 	{
-      for (int k=)
-	  {
+
+		arr2[right] = arr1[right];
+		arr2[left] = arr1[left];
 		
-	  }
-	  
-		printf("%c", arr2[m]);
+		printf("%s", arr2);
+		Sleep(100);
+		system("cls");
+		
+		left++;
+		right--;
 	}
+	return 0;
 }
