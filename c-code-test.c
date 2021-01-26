@@ -718,30 +718,52 @@ int main()
 
 // 	return 0;
 // }
+//辗转相除法
 
+// #include<stdio.h>
+// int main()
+// {
+// int m=24;
+// int n=18;
+// int r=0;
+// scanf("%d%d",&m,&n);
+// while(r=m%n){
+
+// 	m=n;
+// 	n=r;
+
+// }
+// printf("%d\n",n);
+// return 0;
+
+// }
 #include <stdio.h>
-#include <string.h>
-#include<windows.h>
-#include<stdlib.h>
 int main()
 {
-	char arr1[] = "welcome to GDUT!";
-	char arr2[] = "****************";
+	int k = 0;
+	int count = 0;
+	printf("请输入需要查找的范围");
+	scanf("%d", &k);
 
-	int left = 0;
-	int right = strlen(arr1) - 1;
-	while (right >= left)
+	for (int a = 0; a <= k; a++)
 	{
+		int b=0;
 
-		arr2[right] = arr1[right];
-		arr2[left] = arr1[left];
-		
-		printf("%s", arr2);
-		Sleep(100);
-		system("cls");
-		
-		left++;
-		right--;
+		for ( b = 2; b < a ; b++)
+		{
+			if (a % b == 0)
+			{
+				break;
+			}
+			
+		}
+		if(b==a)
+			{	count++;
+				printf("%d  ", a);
+			
+			}
 	}
+	printf("\ncount=%d\n",count);
 	return 0;
+
 }
