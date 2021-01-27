@@ -740,34 +740,58 @@ int main()
 
 
 //素数  最优解  只查奇数 查一般
+// #include <stdio.h>
+// #include <math.h>
+// int main()
+// {
+// 	int k = 0;
+// 	int count = 0;
+// 	printf("请输入需要查找的范围");
+// 	scanf("%d", &k);
+
+// 	for (int a = 1; a <= k; a+=2)
+// 	{
+// 		int b=0;
+
+// 		for ( b = 2; b <= sqrt(a) ; b++)
+// 		{
+// 			if (a % b == 0)
+// 			{
+// 				break;
+// 			}
+			
+// 		}
+// 		if(b>sqrt(a))
+// 			{	count++;
+// 				printf("%d  ", a);
+			
+// 			}
+// 	}
+// 	printf("\ncount=%d\n",count);
+// 	return 0;
+
+// }
+
+
+
 #include <stdio.h>
-#include <math.h>
-int main()
+int main ()
 {
-	int k = 0;
-	int count = 0;
-	printf("请输入需要查找的范围");
-	scanf("%d", &k);
-
-	for (int a = 1; a <= k; a+=2)
+	int arr[]={1,-2,-3,-4,-5,-6,-7,-8,-9,-10};
+	int max=arr[0];
+	int sz=sizeof(arr)/sizeof(arr[0]);
+	for(int a=0;a<sz;a++)
 	{
-		int b=0;
-
-		for ( b = 2; b <= sqrt(a) ; b++)
+		if (arr[a]>max)
 		{
-			if (a % b == 0)
-			{
-				break;
-			}
-			
+			max=arr[a];
+
 		}
-		if(b>sqrt(a))
-			{	count++;
-				printf("%d  ", a);
-			
-			}
+		
 	}
-	printf("\ncount=%d\n",count);
-	return 0;
+printf("max=%d\n",max);
+		return 0;
+
+
 
 }
