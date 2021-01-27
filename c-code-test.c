@@ -738,7 +738,6 @@ int main()
 
 // }
 
-
 //素数  最优解  只查奇数 查一般
 // #include <stdio.h>
 // #include <math.h>
@@ -759,20 +758,18 @@ int main()
 // 			{
 // 				break;
 // 			}
-			
+
 // 		}
 // 		if(b>sqrt(a))
 // 			{	count++;
 // 				printf("%d  ", a);
-			
+
 // 			}
 // 	}
 // 	printf("\ncount=%d\n",count);
 // 	return 0;
 
 // }
-
-
 
 // #include <stdio.h>
 // int main ()
@@ -787,11 +784,28 @@ int main()
 // 			max=arr[a];
 
 // 		}
-		
+
 // 	}
 // printf("max=%d\n",max);
 // 		return 0;
 
-
-
 // }
+
+//打印9*9乘法表
+#include <stdio.h>
+int main()
+{
+	int a = 1; //定义行数
+	int b = 1; //定义列数
+	printf("*****************************九九乘法表*************************\n");
+	for (a = 1; a <= 9; a++)
+	{
+		for (b = 1; b <=a; b++)
+		{
+			int c = a * b;
+			printf("%d*%d=%d ", b, a, c);
+
+		}
+		printf("\n");
+	}
+}
