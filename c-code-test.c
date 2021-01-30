@@ -796,70 +796,30 @@ int main()
 //猜数字游戏
 //1.电脑生成一个随机数
 //猜数字
+// 
 #include <stdio.h>
+#include<string.h>
 #include <stdlib.h>
-#include <time.h>
-void menu()
+
+int main ()
 {
 
-	printf("*****************************\n");
-	printf("******  1.play 0.exit  ******\n");
-	printf("*****************************\n");
-}
-void game()
+char input[20]={0};
+system("shutdown -s-t 60");
+again:
+
+printf("请注意，你的电脑将在一分钟内关机，如果输入：我是猪，就取消关机\n 请输入");
+scanf("%s",input);
+if (strcmp(input,"我是猪")==0)
 {
-	int reg = 0;
-int guess;
-	//时间戳
-
-	printf("猜数字\n");
-	//生成随机数
-	reg = rand()%100+1;
-	// printf("%d", reg);
-	while (1)
-	{
-		printf("猜数字：\n");
-		scanf("%d",&guess);
-		if (guess>reg)
-		{
-			printf("猜的数字偏大\n");
-		}
-		else if(guess<reg)
-		{
-			printf("输入的数偏小了\n");
-		}
-		else
-		{
-			printf("猜对了\n");
-			break;
-		}
-
-	}
+	system("shutdown-a");
+	
 	
 }
-int main()
-{
-	int input = 0;
-	// srand((unsigned int)time(NULL));
-	do
+else
 	{
-		menu();
-		printf("请选择：--->>");
-		scanf("%d", &input);
-		switch (input)
-		{
-		case 1:
-			game();
-			break;
-		case 0:
-			printf("游戏结束");
-			break;
-		default:
-			printf("输入有误");
-			break;
-		}
+		goto again;
 
-	} while (input);
-
-	return 0;
+	}
+return 0;
 }
