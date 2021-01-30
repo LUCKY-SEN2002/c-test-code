@@ -792,20 +792,74 @@ int main()
 // }
 
 //打印9*9乘法表
+//
+//猜数字游戏
+//1.电脑生成一个随机数
+//猜数字
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+void menu()
+{
+
+	printf("*****************************\n");
+	printf("******  1.play 0.exit  ******\n");
+	printf("*****************************\n");
+}
+void game()
+{
+	int reg = 0;
+int guess;
+	//时间戳
+
+	printf("猜数字\n");
+	//生成随机数
+	reg = rand()%100+1;
+	// printf("%d", reg);
+	while (1)
+	{
+		printf("猜数字：\n");
+		scanf("%d",&guess);
+		if (guess>reg)
+		{
+			printf("猜的数字偏大\n");
+		}
+		else if(guess<reg)
+		{
+			printf("输入的数偏小了\n");
+		}
+		else
+		{
+			printf("猜对了\n");
+			break;
+		}
+
+	}
+	
+}
 int main()
 {
-	int a = 1; //定义行数
-	int b = 1; //定义列数
-	printf("*****************************九九乘法表*************************\n");
-	for (a = 1; a <= 9; a++)
+	int input = 0;
+	// srand((unsigned int)time(NULL));
+	do
 	{
-		for (b = 1; b <=a; b++)
+		menu();
+		printf("请选择：--->>");
+		scanf("%d", &input);
+		switch (input)
 		{
-			int c = a * b;
-			printf("%d*%d=%d ", b, a, c);
-
+		case 1:
+			game();
+			break;
+		case 0:
+			printf("游戏结束");
+			break;
+		default:
+			printf("输入有误");
+			break;
 		}
-		printf("\n");
-	}
+
+	} while (input);
+
+	return 0;
 }
