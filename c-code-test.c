@@ -796,30 +796,58 @@ int main()
 //猜数字游戏
 //1.电脑生成一个随机数
 //猜数字
-// 
+//
+// #include <stdio.h>
+// #include<string.h>
+// #include <stdlib.h>
+
+// int main ()
+// {
+
+// char input[20]={0};
+// system("shutdown -s-t 60");
+// again:
+
+// printf("请注意，你的电脑将在一分钟内关机，如果输入：我是猪，就取消关机\n 请输入");
+// scanf("%s",input);
+// if (strcmp(input,"我是猪")==0)
+// {
+// 	system("shutdown-a");
+
+// }
+// else
+// 	{
+// 		goto again;
+
+// 	}
+// return 0;
+// }
 #include <stdio.h>
-#include<string.h>
-#include <stdlib.h>
-
-int main ()
+//交换数字函数
+void swap(int x, int y)
 {
-
-char input[20]={0};
-system("shutdown -s-t 60");
-again:
-
-printf("请注意，你的电脑将在一分钟内关机，如果输入：我是猪，就取消关机\n 请输入");
-scanf("%s",input);
-if (strcmp(input,"我是猪")==0)
-{
-	system("shutdown-a");
-	
-	
+	int temp = 0;
+	temp = x;
+	x = y;
+	y = temp;
 }
-else
-	{
-		goto again;
+swap2(int*pa,int*pb)
+{int temp=0;
+temp=*pa;
+*pa=*pb;
+*pb=temp;
 
-	}
+
+
+}
+int main()
+{
+	int a = 10;
+	int b = 20;
+	swap(a, b);
+	printf("a=%d b=%d\n", a, b);
+	swap2(&a,&b);
+	printf("a=%d b=%d", a, b);
 return 0;
+
 }
