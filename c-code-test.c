@@ -822,32 +822,85 @@ int main()
 // 	}
 // return 0;
 // }
-#include <stdio.h>
-//交换数字函数
-void swap(int x, int y)
+// #include <stdio.h>
+// //交换数字函数
+// void swap(int x, int y)
+// {
+// 	int temp = 0;
+// 	temp = x;
+// 	x = y;
+// 	y = temp;
+// }
+// swap2(int*pa,int*pb)
+// {int temp=0;
+// temp=*pa;
+// *pa=*pb;
+// *pb=temp;
+
+// }
+// int main()
+// {
+// 	int a = 10;
+// 	int b = 20;
+// 	swap(a, b);
+// 	printf("a=%d b=%d\n", a, b);
+// 	swap2(&a,&b);
+// 	printf("a=%d b=%d", a, b);
+// return 0;
+
+// }
+
+// #include <stdio.h>
+// int judge(int x, int y)
+// {
+// 	if (y % x == 0)
+// 	{
+// 		return 0;
+// 	}
+// 	else if (x == y - 1)
+// 	{
+// 		return 1;
+// 	}
+// }
+
+// int main()
+// {
+// 	int num = 0;
+// 	printf("***********这是一个判断素数的函数**********\n");
+// 	printf("请输入需要判断的数\n");
+// 	scanf("%d", &num);
+
+// 	for (int a = 2; a < num; a++)
+// 	{
+// 		if (judge(a, num) == 1)
+// 		{
+// 			printf("这是一个素数");
+// 			break;
+// 		}
+// 		else if(judge(a, num) == 0)
+// 		{
+// 			printf("这不是素数");
+// 			break;
+// 		}
+// 	}
+// 	return 0;
+// }
+
+//函数的递归
+//分开打印123
+#include <stdio.h
+void print(int x)
 {
-	int temp = 0;
-	temp = x;
-	x = y;
-	y = temp;
-}
-swap2(int*pa,int*pb)
-{int temp=0;
-temp=*pa;
-*pa=*pb;
-*pb=temp;
-
-
-
+	if (x > 9)
+	{
+		print(x / 10);
+	}
+	printf("%d ", x % 10);
 }
 int main()
 {
-	int a = 10;
-	int b = 20;
-	swap(a, b);
-	printf("a=%d b=%d\n", a, b);
-	swap2(&a,&b);
-	printf("a=%d b=%d", a, b);
-return 0;
-
+	unsigned int num = 0;
+	scanf("%d", &num);
+	print(num);
+	return 0;
 }
