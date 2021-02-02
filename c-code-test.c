@@ -888,19 +888,55 @@ int main()
 
 //函数的递归
 //分开打印123
-#include <stdio.h
-void print(int x)
+// #include <stdio.h
+// void print(int x)
+// {
+// 	if (x > 9)
+// 	{
+// 		print(x / 10);
+// 	}
+// 	printf("%d ", x % 10);
+// }
+// int main()
+// {
+// 	unsigned int num = 0;
+// 	scanf("%d", &num);
+// 	print(num);
+// 	return 0;
+// }
+
+//自写计算字符串长度的函数
+
+#include <stdio.h>
+#include <string.h>
+int my_strlen(char *str) //
 {
-	if (x > 9)
+	// int count = 0;
+//
+	// while (*str != '\0')
+	// {
+	// 	count++;
+	// 	str++;
+	// }
+	//使用函数递归的方法
+	if(*str!='\0')
 	{
-		print(x / 10);
+		return 1+my_strlen(str+1);
 	}
-	printf("%d ", x % 10);
+	else
+	{
+		return 0;
+	}
+	// return count;
 }
 int main()
 {
-	unsigned int num = 0;
-	scanf("%d", &num);
-	print(num);
+
+	char arr[] = "akfbkdslgj.svdskh";
+	int lengh = my_strlen(arr); //这里传出的arr只是首字符，不是整个数组
+
+	printf("%d", lengh);
+
 	return 0;
 }
+//方法二
