@@ -907,36 +907,66 @@ int main()
 
 //自写计算字符串长度的函数
 
+// #include <stdio.h>
+// #include <string.h>
+// int my_strlen(char *str) //
+// {
+// 	// int count = 0;
+// //
+// 	// while (*str != '\0')
+// 	// {
+// 	// 	count++;
+// 	// 	str++;
+// 	// }
+// 	//使用函数递归的方法
+// 	if(*str!='\0')
+// 	{
+// 		return 1+my_strlen(str+1);
+// 	}
+// 	else
+// 	{
+// 		return 0;
+// 	}
+// 	// return count;
+// }
+// int main()
+// {
+
+// 	char arr[] = "akfbkdslgj.svdskh";
+// 	int lengh = my_strlen(arr); //这里传出的arr只是首字符，不是整个数组
+
+// 	printf("%d", lengh);
+
+// 	return 0;
+// }
+//方法二
+
+//斐波那契数的计算算法及优化
 #include <stdio.h>
-#include <string.h>
-int my_strlen(char *str) //
+int count = 0;
+int fib(int n)
 {
-	// int count = 0;
-//
-	// while (*str != '\0')
-	// {
-	// 	count++;
-	// 	str++;
-	// }
-	//使用函数递归的方法
-	if(*str!='\0')
+	if (n == 3)
 	{
-		return 1+my_strlen(str+1);
+		count++;
+	}
+	if (n <= 2)
+	{
+		return 1;
 	}
 	else
 	{
-		return 0;
+		return fib(n - 1) + fib(n - 2);
 	}
-	// return count;
 }
 int main()
 {
-
-	char arr[] = "akfbkdslgj.svdskh";
-	int lengh = my_strlen(arr); //这里传出的arr只是首字符，不是整个数组
-
-	printf("%d", lengh);
-
+	int n = 0;
+	int reg = 0;
+	printf("请输入需要计算的第几个斐波那契数:");
+	scanf("%d", &n);
+	reg = fib(n);
+	printf("第%d个斐波那契数是%d\n", n, reg);
+	printf("重复计算了%d",count);
 	return 0;
 }
-//方法二
