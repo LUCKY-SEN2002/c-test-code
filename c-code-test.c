@@ -942,31 +942,29 @@ int main()
 //方法二
 
 //斐波那契数的计算算法及优化
-#include <stdio.h>
-int count = 0;
-int fib(int n)
+//
+汉诺塔的实现
+
+#include <stdio.h>;
+void hanoi(int n, char A, char B, char C)
 {
-	if (n == 3)
+	if (n == 1)
 	{
-		count++;
-	}
-	if (n <= 2)
-	{
-		return 1;
+		printf("%c------>>%c\n", A, C);
 	}
 	else
 	{
-		return fib(n - 1) + fib(n - 2);
+		hanoi(n - 1, A, C, B);
+		printf("%c------>>%c\n", A, C);
+		hanoi(n - 1, B, A, C);
 	}
 }
 int main()
 {
-	int n = 0;
-	int reg = 0;
-	printf("请输入需要计算的第几个斐波那契数:");
-	scanf("%d", &n);
-	reg = fib(n);
-	printf("第%d个斐波那契数是%d\n", n, reg);
-	printf("重复计算了%d",count);
+	int num = 0;
+
+	printf("请输入汉诺塔的塔数：");
+	scanf("%d", &num);
+	hanoi(num, 'A', 'B', 'C');
 	return 0;
 }
