@@ -943,28 +943,65 @@ int main()
 
 //斐波那契数的计算算法及优化
 //
-汉诺塔的实现
+// 汉诺塔的实现
 
-#include <stdio.h>;
-void hanoi(int n, char A, char B, char C)
+// #include <stdio.h>;
+// void hanoi(int n, char A, char B, char C)
+// {
+// 	if (n == 1)
+// 	{
+// 		printf("%c------>>%c\n", A, C);
+// 	}
+// 	else
+// 	{
+// 		hanoi(n - 1, A, C, B);
+// 		printf("%c------>>%c\n", A, C);
+// 		hanoi(n - 1, B, A, C);
+// 	}
+// }
+// int main()
+// {
+// 	int num = 0;
+
+// 	printf("请输入汉诺塔的塔数：");
+// 	scanf("%d", &num);
+// 	hanoi(num, 'A', 'B', 'C');
+// 	return 0;
+// }
+
+//冒泡排序算法
+#include <stdio.h>
+void bublle_sort(int arr1[], int sz)
 {
-	if (n == 1)
+
+	for (int i = 0; i < sz - 1; i++)
 	{
-		printf("%c------>>%c\n", A, C);
-	}
-	else
-	{
-		hanoi(n - 1, A, C, B);
-		printf("%c------>>%c\n", A, C);
-		hanoi(n - 1, B, A, C);
+		int flag = 1;
+		for (int j = 0; j < sz - i - 1; j++)
+		{
+			if (arr1[j] > arr1[j +1])
+			{
+				int temp = 0;
+				temp = arr1[j];
+				arr1[j] = arr1[j + 1];
+				arr1[j + 1] = temp;
+				flag = 0;
+			}
+		}
+		if (flag == 1)
+		{
+			break;
+		}
 	}
 }
 int main()
 {
-	int num = 0;
-
-	printf("请输入汉诺塔的塔数：");
-	scanf("%d", &num);
-	hanoi(num, 'A', 'B', 'C');
+	int arr[] = {48,656,5,59,0};
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	bublle_sort(arr, sz);
+	for (int i = 0; i < sz; i++)
+	{
+		printf("%d  ", arr[i]);
+	}
 	return 0;
 }
