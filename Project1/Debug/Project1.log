@@ -1,0 +1,3 @@
+﻿  test.c
+C:\Users\86137\source\repos\Project1\Project1\test.c(33,15): warning C4013: “computermove”未定义；假设外部返回 int
+  Project1.vcxproj -> C:\Users\86137\source\repos\Project1\Debug\Project1.exe
