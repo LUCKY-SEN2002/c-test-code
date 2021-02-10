@@ -970,38 +970,78 @@ int main()
 // }
 
 //冒泡排序算法
-#include <stdio.h>
-void bublle_sort(int arr1[], int sz)
-{
+// #include <stdio.h>
+// void bublle_sort(int arr1[], int sz)
+// {
 
-	for (int i = 0; i < sz - 1; i++)
-	{
-		int flag = 1;
-		for (int j = 0; j < sz - i - 1; j++)
-		{
-			if (arr1[j] > arr1[j +1])
-			{
-				int temp = 0;
-				temp = arr1[j];
-				arr1[j] = arr1[j + 1];
-				arr1[j + 1] = temp;
-				flag = 0;
-			}
-		}
-		if (flag == 1)
-		{
-			break;
-		}
-	}
-}
-int main()
+// 	for (int i = 0; i < sz - 1; i++)
+// 	{
+// 		int flag = 1;//优化 假设有序 下面判断后flag是否改变
+// 		for (int j = 0; j < sz - i - 1; j++)
+// 		{
+// 			if (arr1[j] > arr1[j +1])
+// 			{
+// 				int temp = 0;
+// 				temp = arr1[j];
+// 				arr1[j] = arr1[j + 1];
+// 				arr1[j + 1] = temp;
+// 				flag = 0;//说明排序还没有，还不是有序的数组
+// 			}
+// 		}
+// 		if (flag == 1)
+// 		{
+// 			break;
+// 		}
+// 	}
+// }
+// int main()
+// {
+// 	int arr[] = {48,656,5,59,0};
+// 	int sz = sizeof(arr) / sizeof(arr[0]);
+// 	bublle_sort(arr, sz);
+// 	for (int i = 0; i < sz; i++)
+// 	{
+// 		printf("%d  ", arr[i]);
+// 	}
+// 	return 0;
+// }
+
+
+
+//指针
+//#include <stdio.h>
+//int main()
+//{
+////    printf("%d\n",sizeof(char*));
+////    printf("%d\n",sizeof(int*));
+////    printf("%d\n",sizeof(short*));
+////    printf("%d\n",sizeof(double*));
+//
+//int a=0x11223344;//4个字节
+//
+//int * pa=&a;
+//*pa = 0;
+//
+////char* pc=&a;
+//printf("%p\n",pa);
+//
+//
+//	return 0;
+//
+//}
+
+#include<stdio.h>
+int main ()
 {
-	int arr[] = {48,656,5,59,0};
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	bublle_sort(arr, sz);
-	for (int i = 0; i < sz; i++)
-	{
-		printf("%d  ", arr[i]);
-	}
-	return 0;
+	int a = 0x11223344;
+	int* pa = &a;
+	char* pc = &a;
+	printf("%p\n", pa);
+	printf("%p\n", pa+1);
+	printf("%p\n", pc);
+	printf("%p\n", pc+1);
+
+
+
+
 }
