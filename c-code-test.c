@@ -1030,18 +1030,93 @@ int main()
 //
 //}
 
-#include<stdio.h>
-int main ()
+//#include<stdio.h>
+//int main ()
+//{
+//	int a = 0x11223344;
+//	int* pa = &a;
+//	char* pc = &a;
+//	printf("%p\n", pa);
+//	printf("%p\n", pa+1);
+//	printf("%p\n", pc);
+//	printf("%p\n", pc+1);
+//
+//	return 0;
+//
+//
+//
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int arr[10] = { 0 };
+//
+//	//int* p = arr;
+//	char* d = arr;
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		*(d + i) = 1;
+//
+//
+//	}
+//
+//}
+
+//#define a 5
+//float arr[a];
+//float* p;
+//
+//#include <stdio.h>
+//int main() 
+//{
+//	/*int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int* p = arr;
+//	for (int i = 0; i < sz; i++)
+//	{
+//		printf("%d", *p);
+//		p++;
+//
+//
+//	}*/
+//
+//	for (p = &arr[0]; p < &arr[a];)
+//	{
+//		/**p = 0;
+//		*p++;*/
+//		*p++=0;
+//	}
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//
+//	for (int b = 0; b < sz; b++)
+//	{
+//		printf("%d", arr[b]);
+//
+//	}
+//	return 0;
+//
+//}
+#include <stdio.h>
+int my_strlen(char*str)
 {
-	int a = 0x11223344;
-	int* pa = &a;
-	char* pc = &a;
-	printf("%p\n", pa);
-	printf("%p\n", pa+1);
-	printf("%p\n", pc);
-	printf("%p\n", pc+1);
+	char* start = str;
+	char* end = str;
+	while (*end!='\0')
+	{
+		end++;
 
+	}
+	return end - start;
 
+}
+int main()
+{
+	char arr[] = { "bit" };
+	int len =my_strlen(&arr);
+	printf("%d\n", len);
+	return  0;
 
 
 }
