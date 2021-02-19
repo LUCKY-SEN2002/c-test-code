@@ -1186,25 +1186,126 @@ int main()
 
 //描述学生的一些数据
 
+//#include<stdio.h>
+//
+////strcut 结构体关键字 MyStruct-结构体标签 
+//struct MyStruct
+//{
+//	//成员变量
+//	char name[20];
+//	short age;
+//	char tele[12];
+//	char sex[5];
+//
+//
+//}s1, s2, s3;//这三个是全局变量
+//int main()
+//{
+//
+//	struct MyStruct s;//局部变量
+//
+//	return 0;
+//	
+//}
+
+
+//给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。
+//
+//你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+//
+//你可以按任意顺序返回答案。
+//
+//
+//
+//示例 1：
+//
+//输入：nums = [2, 7, 11, 15], target = 9
+//输出：[0, 1]
+//解释：因为 nums[0] + nums[1] == 9 ，返回[0, 1] 。
+
+
+//#include<stdio.h>
+//int main()
+//{
+//
+//	int nums[] = { 2,3,4,9 };
+//	int target = 13;
+//	int sz = sizeof(nums) / sizeof(nums[0]);
+//	
+//	for (int a = 0; a < sz; a++)
+//	{
+//		
+//		for (int b=a+1 ; b < sz; b++)
+//		{
+//			if (nums[a]+nums[b]==target)
+//			{
+//				printf("[%d,%d]", a, b);
+//			}
+//
+//		}
+//
+//
+//
+//
+//	}
+//
+//	return 0;
+//}
+//#include <stdio.h>
+//int main()
+//{
+//	float a = 0;
+//	float b= 0;
+//	float  c = 0;
+//	float t = 0;//变量初始化
+//	scanf("%f%f%f", &a, &b,&c);
+//	if (a > b)
+//	{ 
+//		t = a;//    intput a= 4.0 b= 2.0  t=4 .0 
+//		a = b;//  a=2.0  
+//		b = t;//   b=4.0
+//	}
+//	if (a > c)
+//	{
+//		t = a;
+//		a = c;
+//		c = t;		
+//	}
+//	if (b > c)
+//	{
+//		t = b;
+//		b = c;
+//		c = t;
+//	}
+//	printf("%.1f %.1f %.1f ", a, b, c);
+//	return 0;
+//
+
+
+
+//}
+//如果数组是单调递增或单调递减的，那么它是单调的。
+//
+//如果对于所有 i <= j，A[i] <= A[j]，那么数组 A 是单调递增的。 如果对于所有 i <= j，A[i] > = A[j]，那么数组 A 是单调递减的。
+//
+//当给定的数组 A 是单调数组时返回 true，否则返回 false。
+//
+
 #include<stdio.h>
-
-//strcut 结构体关键字 MyStruct-结构体标签 
-struct MyStruct
-{
-	//成员变量
-	char name[20];
-	short age;
-	char tele[12];
-	char sex[5];
-
-
-}s1, s2, s3;//这三个是全局变量
 int main()
 {
 
-	struct MyStruct s;//局部变量
+	int a = 1;
+	char* p = (char*)&a;;
+	if (*p == 1)
+	{
 
-	return 0;
+		printf("小端\n");
 
+	}
+	else
+	{
+
+		printf("大端\n");
+	}
 }
-
