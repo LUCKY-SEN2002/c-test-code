@@ -797,31 +797,36 @@ int main()
 //1.电脑生成一个随机数
 //猜数字
 //
-// #include <stdio.h>
-// #include<string.h>
-// #include <stdlib.h>
+ /*#include <stdio.h>
+ #include<string.h>
+#include <process.h>
+ #include <stdlib.h>
 
-// int main ()
-// {
+ int main ()
+ {
 
-// char input[20]={0};
-// system("shutdown -s-t 60");
-// again:
+	 char input[20]={0};
+	 char a[] = {"I am a pig"};
 
-// printf("请注意，你的电脑将在一分钟内关机，如果输入：我是猪，就取消关机\n 请输入");
-// scanf("%s",input);
-// if (strcmp(input,"我是猪")==0)
-// {
-// 	system("shutdown-a");
+	 system("shutdown -s-t 60");
+	 again:
 
-// }
-// else
-// 	{
-// 		goto again;
+	 printf("请注意，你的电脑将在一分钟内关机，如果输入：I am a pig，就取消关机:");
+	 printf("\n");
+	 printf("请输入：");
+	 scanf("%s",&input);
+		 if (strcmp(input,a)==0)
+		 {
+ 			system("shutdown-a");
 
-// 	}
-// return 0;
-// }
+		 }
+		 else
+ 		{
+ 			goto again;
+
+ 		}
+		 return 0;
+ }*/
 // #include <stdio.h>
 // //交换数字函数
 // void swap(int x, int y)
@@ -1098,25 +1103,108 @@ int main()
 //	return 0;
 //
 //}
-#include <stdio.h>
-int my_strlen(char*str)
+
+
+//字符串指针实现函数
+//#include <stdio.h>
+//int my_strlen(char*str)
+//{
+//	char* start = str;
+//	char* end = str;
+//	while (*end!='\0')
+//	{
+//		end++;
+//
+//	}
+//	return end - start;
+//
+//}
+//int main()
+//{
+//	char arr[] = { "bit" };
+//	int len =my_strlen(&arr);
+//	printf("%d\n", len);
+//	return  0;
+//
+//
+//}
+
+
+
+//#include <stdio.h>
+////倒序打印数组内容
+//
+//
+//void print(int arr[], int sz)
+//{
+//	for (int i = 0; i < sz; i++)
+//	{
+//		printf("%d", arr[i]);
+//
+//	}
+//	printf("\n");
+//
+//
+//
+//
+//}
+//void reverse(int arr[], int sz)
+//{
+//	int left = 0;
+//	
+//
+//	
+//	int right = sz-1;
+//	while (left < right)
+//	{
+//		int temp = arr[left];
+//		arr[left] = arr[right]; 
+//		arr[right] = temp;
+//		
+//		right--;
+//		left++;
+//
+//
+//	}
+//
+//	
+//}
+//int main()
+//{
+//
+//	int arr[] = {1,2,3,4,5,6,7,8,9};
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//
+//	print(arr,sz);
+//	reverse(arr, sz);
+//	print(arr, sz);
+//
+//	return 0;
+//
+//}
+
+
+//描述学生的一些数据
+
+#include<stdio.h>
+
+//strcut 结构体关键字 MyStruct-结构体标签 
+struct MyStruct
 {
-	char* start = str;
-	char* end = str;
-	while (*end!='\0')
-	{
-		end++;
+	//成员变量
+	char name[20];
+	short age;
+	char tele[12];
+	char sex[5];
 
-	}
-	return end - start;
 
-}
+}s1, s2, s3;//这三个是全局变量
 int main()
 {
-	char arr[] = { "bit" };
-	int len =my_strlen(&arr);
-	printf("%d\n", len);
-	return  0;
 
+	struct MyStruct s;//局部变量
+
+	return 0;
 
 }
+
